@@ -1,0 +1,320 @@
+ /*ESTILOS COMUNES */
+ *{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+img{
+    border-radius: 15px;
+}
+
+/* ESTILOS DE HEADER */
+
+header{
+    padding: auto;
+    text-align: center;
+    background-image:url(../Imagenes/estadio\ lleno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header div{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(202, 213, 243, 0.7);
+    background-image: linear-gradient(blue aqua);
+    color:rgb(44, 14, 83);
+    font-size: 1.8 rem;
+}
+
+/* ESTILOS NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(4, 105, 136);
+    position: sticky;
+    top:0;
+    border-style:solid;
+    border-width: 8px;
+    border-color: rgb(12, 238, 238);
+    z-index: 1;
+}
+
+.navbar a{
+    color:rgb(33, 34, 33);
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    background-color: #19f0f0;
+}
+    
+/* PARTE PRINCIPAL */
+
+.principal{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+aside{
+    flex-basis: 30%;
+    padding: auto;
+    background-color: blue;
+    text-align: center;
+}
+
+main{
+    flex-basis: 70%;
+    background-color: aquamarine;
+}
+
+.imagen img{
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: 0,5s all ease-in-out;
+}
+
+.imagen:hover img{
+    transform:scale(1.03);
+} 
+
+.ca{
+    font-family: 'Times New Roman', Times, serif;
+    border: 5px double;
+    background-image:linear-gradient(rgb(24, 24, 172) rgb(87, 202, 202));
+}
+
+.asidetitle{
+    text-decoration: underline;
+}
+
+/* ESTILO MAIN */
+
+main{
+    flex-basis: 75%;
+    padding: 20px;
+    padding-left: 30px;
+    background-color: rgb(9, 221, 221);
+}
+
+main h2{
+    text-transform: uppercase;
+    margin-top: 15px;
+    color: blue;
+    text-align: center;
+}
+
+main p{
+    font-style: italic;
+}
+
+main img{
+    width: 100%;
+    height: 20 vw;
+    object-fit: cover;
+}
+
+main .seguirleyendo{
+    background-color: rgb(89, 89, 241);
+    color:rgb(1, 1, 15);
+    text-decoration:double;
+    padding: 15px;
+    border-radius: 15px;
+    display:block;
+    margin:auto;
+    text-align: center;
+    width: fit-content;
+}
+
+main .seguirleyendo:hover{
+    background-color: aqua;
+}
+
+.vermas{
+    display:block;
+    background-color: rgb(21, 59, 226);
+    color:aquamarine;
+    text-decoration: double;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.vermas:hover{
+    background-color: rgb(97, 209, 209);
+}
+
+/* ESTILO FOOTER */
+
+footer{
+    padding:10px;
+    text-align: center;
+    background-color: rgb(174, 174, 250);
+    color:black
+}
+
+footer img{
+    width:5%;
+    height: 5%;
+}
+
+.icon{
+    width: 7vw !important;
+}
+
+/*ESTILO FORMULARIO  */
+
+form{
+    padding: 30px;
+    background-color: rgb(112, 202, 253);
+    border: 5px outset cornflowerblue;
+}
+
+label{
+    width: 200px;
+    background-color: antiquewhite;
+    color: #2e2ebb;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+fieldset{
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:15px;
+    margin:auto;
+    width:max-content;
+    font-size: 1.5rem;
+    border:7px double blue;
+}
+
+legend{
+    text-transform: uppercase;
+    font-size:1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* estilo noticia */
+
+.fondo{
+    background-color: hsl(187, 82%, 78%);
+}
+
+.parrafo{
+    color:rgb(18, 18, 88);
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+
+ul{
+    color: rgb(243, 55, 55);
+    font-size:1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,h3{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* MEDIA QUERIE */
+
+@media (max-width:800px) {
+    header{
+        background-position: center;
+    }
+} /*header */
+
+@media (max-width:800px) {
+    .navbar{
+        flex-direction: column;
+        position:unset;
+    }
+    .navbar a{
+        text-align: center;
+    }
+}/* navbar */
+
+@media (max-width:800px){
+    .principal{
+        flex-direction:column;
+    }
+}
+@media (max-width:800px){
+    .image img{
+        width: 50%;
+        height: auto;
+    }
+}/* parte principal  */
+
+@media (max-width:500px){
+    fieldset{
+        display:flex;
+        flex-direction: column;
+    }
+}/* formulario */
+
+@media (max-width:300px) {
+    .containerfluid{
+        width: 30%;
+        height: auto;
+    }
+    
+}
+
+/* ESTILO TABLA DE POSICIONES BOOTSTRAP */
+
+
+.col1{
+    background-color: rgb(174, 191, 202);
+    text-align:start;
+}
+.col1 h1{
+    font-size: x-large;
+    color: black;
+}
+
+.col2{
+    background-color: #2e2ebb;
+    text-align: start;
+}
+.col2 h1{
+    font-size:x-large;
+    color: black;
+}
+
+    
+.col3{
+    background-color: rgb(155, 201, 241);
+    text-align: center;
+    color: blue;
+}
+.col4{
+    text-align: center;
+    background-color: rgb(169, 248, 169);
+    color:#2e2ebb;
+}
+.col5{
+    text-align: center;
+    background-color: white;
+    color:#2e2ebb;
+}
+/* ESTILO CAROUSEL BOOTSTRAP */
+
+#carouselExampleIndicators img{
+    width: 50vw;
+    height: 30vw;
+}
+
+
